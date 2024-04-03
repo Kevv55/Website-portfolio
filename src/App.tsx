@@ -3,7 +3,6 @@ import Navbar from "@/scenes/navbar";
 import { SelectedPage } from "./shared/types";
 import Home from "./scenes/home";
 import Benefit from "./scenes/aboutMe/index.tsx";
-import OurClasses from "./scenes/classes";
 import ContactUs from "./scenes/contactUs/index.tsx";
 import Footer from "./scenes/footer/index.tsx";
 import Timeline from "./scenes/ResumeTimeline/index.tsx";

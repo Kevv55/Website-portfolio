@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import Navbar from "@/scenes/navbar";
 import { SelectedPage } from "./shared/types";
 import Home from "./scenes/home";
-import Benefit from "./scenes/benefits";
-import OurClasses from "./scenes/classes.tsx";
+import Benefit from "./scenes/aboutMe/index.tsx";
+import OurClasses from "./scenes/classes";
 import ContactUs from "./scenes/contactUs/index.tsx";
 import Footer from "./scenes/footer/index.tsx";
+import Timeline from "./scenes/ResumeTimeline/index.tsx";
+import Projects from "./scenes/projects/Projects.tsx";
 
 
 function App() {
@@ -36,8 +38,11 @@ function App() {
 
       <Home setSelectedPage={setSelectedPage}/>
       <Benefit setSelectedPage={setSelectedPage}/>
-      <OurClasses setSelectedPage={setSelectedPage}/>
+      {/* <OurClasses setSelectedPage={setSelectedPage}/> */}
+      <Projects setSelectedPage={setSelectedPage}/>
+      <Timeline/>
       <ContactUs setSelectedPage={setSelectedPage}/>
+      
       <Footer/>
     </div>
   );

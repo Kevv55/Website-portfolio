@@ -8,13 +8,13 @@ const childVariant = {
 };
 
 type Props = {
-  icon: JSX.Element;
+  image: string;
   title: string;
   description: string;
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
+const Benefit = ({ image, title, description, setSelectedPage }: Props) => {
   return (
     <motion.div
       variants={childVariant}
@@ -22,7 +22,7 @@ const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
     >
       <div className="mb-4 flex justify-center">
         <div className="rounded-full border-2 border-gray-100 bg-primary-100 p-4">
-          {icon}
+          <img src={image}></img>
         </div>
       </div>
 
@@ -30,8 +30,6 @@ const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
       <p className="my-3">{description}</p>
       <AnchorLink
         className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-        onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-        href={`#${SelectedPage.ContactUs}`}
       >
         <p>Learn More</p>
       </AnchorLink>

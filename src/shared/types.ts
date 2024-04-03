@@ -1,16 +1,18 @@
 export enum SelectedPage{
     Home = "home",
-    Benefits = "benefits",
-    OurClasses = "ourclassses",
-    ContactUs = "contactus",
+    AboutMe= "aboutMe",
+    Experience = "experience",
+    GetInTouch = "getInTouch",
+    Projects = "projects"
   }
 // so that you can use this across multiple pages
 
 
 export interface BenefitType {
-  icon: JSX.Element;
+  image: string;
   title: string;
   description: string;
+  path: string;
 }
 
 export interface ClassType {

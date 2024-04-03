@@ -7,15 +7,15 @@ export default {
   theme: {
     extend: {
       colors:{
-        "gray-20": "#F8F4EB",
+        "gray-20": "#ebf8f8",
         "gray-50": "#EFE6E6",
         "gray-100": "#DFCCCC",
-        "gray-500": "#5E0000",
-        "primary-100": "#FFE1E0",
-        "primary-300": "#FFA6A3",
-        "primary-500": "#FF6B66",
-        "secondary-400": "#FFCD5B",
-        "secondary-500": "#FFC132",
+        "gray-500": "#1c0000",
+        "primary-100": "#C2E6F7",
+        "primary-300": "#89CFF0",
+        "primary-500": "#50B8E9",
+        "secondary-400": "#FFD700",
+        "secondary-500": "#FFE140",
       },
       backgroundImage: (theme) => ({
         "gradient-yellowred": "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",

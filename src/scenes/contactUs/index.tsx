@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
-import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
 import HText from "@/shared/HText";
+import ContactGraphic from "@/assets/971.jpg"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -26,9 +26,9 @@ const ContactUs = ({ setSelectedPage }: Props) => {
   };
 
   return (
-    <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
+    <section id="getInTouch" className="mx-auto w-5/6 pt-24 pb-32">
       <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
+        onViewportEnter={() => setSelectedPage(SelectedPage.GetInTouch)}
       >
         {/* HEADER */}
         <motion.div
@@ -43,12 +43,10 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           }}
         >
           <HText>
-            <span className="text-primary-500">JOIN NOW</span> TO GET IN SHAPE
+            <span className="text-primary-500">CONTACT ME</span>
           </HText>
           <p className="my-5">
-            Congue adipiscing risus commodo placerat. Tellus et in feugiat nisl
-            sapien vel rhoncus. Placerat at in enim pellentesque. Nulla
-            adipiscing leo egestas nisi elit risus sit. Nunc cursus sagittis.
+            Contact me to talk about how I can contribute to your team.
           </p>
         </motion.div>
 
@@ -65,6 +63,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, y: 0 },
             }}
           >
+            <div className="w-4/5">
             <form
               target="_blank"
               onSubmit={onSubmit}
@@ -107,7 +106,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
               <textarea
                 className={inputStyles}
-                placeholder="Write a message for my totally realistic fake gym"
+                placeholder="LEAVE A MESSAGE"
                 rows={4}
                 cols={50}
                 {...register("message", {
@@ -131,6 +130,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 SUBMIT
               </button>
             </form>
+            </div>
           </motion.div>
 
           <motion.div
@@ -148,7 +148,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               <img
                 className="w-full"
                 alt="contact-us-page-graphic"
-                src={ContactUsPageGraphic}
+                src={ContactGraphic}
               />
             </div>
           </motion.div>

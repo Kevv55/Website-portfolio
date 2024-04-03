@@ -1,10 +1,10 @@
 import {Bars3BottomRightIcon, XMarkIcon} from "@heroicons/react/24/solid"
-import Logo from "@/assets/Logo.png"
 import Anchors from './anchors'
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useState } from "react";
 import ActionButton from "@/shared/ActionButton";
+import logoKelvin from "@/assets/logoKelvin.svg"
 
 type Props = {
   isTopofPage: boolean,
@@ -15,7 +15,7 @@ type Props = {
 const Navbar = ({isTopofPage, selectedPage, setSelectedPage}: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)")
   const[MenuToggle, setMenuToggle] = useState<boolean>(false)
-  const navbarBackground = isTopofPage ? "" : "bg-primary-100 drop-shadow"
+  const navbarBackground = isTopofPage ? "" : "bg-primary-100 drop-shadow "
   // this allows for the navbar items to expand and contract as the website is scaled up and down
     const flexBetween = "flex items-center justify-between"
   return (
@@ -25,13 +25,13 @@ const Navbar = ({isTopofPage, selectedPage, setSelectedPage}: Props) => {
     // w-full means that the navbar will take up the full width of the website py is for the padding
     <nav>
       {/* Outer div holding the inner div*/}
-      <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
+      <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-20 w-full py-6 h-18/`}>
         {/* Inner div holding all the elements taking up 5/8ths of the outer div space*/}
         <div className={`${flexBetween} mx-auto w-5/6`}>
           {/* left hand div
           leaves a 16 point gap between itself and the next div*/}
           <div className={`${flexBetween} w-full gap-16`}>
-            <img src={Logo} alt='Logo'></img>
+            <img src={logoKelvin} alt='Logo' width={75} height={75}></img>
           </div>
 
           {/* left hand div
@@ -43,20 +43,19 @@ const Navbar = ({isTopofPage, selectedPage, setSelectedPage}: Props) => {
             page="Home" 
             selectedPage={selectedPage} 
             setSelectedPage={setSelectedPage}/>
-            <Anchors page="Benefits"
+            <Anchors page="About Me"
             selectedPage={selectedPage} 
             setSelectedPage={setSelectedPage}/>
-            <Anchors page="Our classes"
+            <Anchors page="Projects"
             selectedPage={selectedPage} 
             setSelectedPage={setSelectedPage}/>
-              <Anchors page="Contact Us"
-              selectedPage={selectedPage} 
-              setSelectedPage={setSelectedPage}
-              />
+            <Anchors page="Experience"
+            selectedPage={selectedPage} 
+            setSelectedPage={setSelectedPage}/>
             </div>
             <div className={`${flexBetween} gap-8 text-sm`}>
               <ActionButton setSelecetedPage={setSelectedPage}>
-                Become a Member
+                Get in touch
               </ActionButton>
             </div>
           </div> : (
@@ -88,13 +87,13 @@ const Navbar = ({isTopofPage, selectedPage, setSelectedPage}: Props) => {
             page="Home" 
             selectedPage={selectedPage} 
             setSelectedPage={setSelectedPage}/>
-            <Anchors page="Benefits"
+            <Anchors page="About Me"
             selectedPage={selectedPage} 
             setSelectedPage={setSelectedPage}/>
-            <Anchors page="Our classes"
+            <Anchors page="Experience"
             selectedPage={selectedPage} 
             setSelectedPage={setSelectedPage}/>
-              <Anchors page="Contact Us"
+              <Anchors page="Get in Touch"
               selectedPage={selectedPage} 
               setSelectedPage={setSelectedPage}
               />
